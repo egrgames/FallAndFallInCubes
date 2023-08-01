@@ -8,13 +8,10 @@ public class StickmanBodyScript : MonoBehaviour
     public Animator anim;
     private bool backTheAngle;
     private Transform from;
-    private Transform to;
     public float percentOfAngle;
     // Start is called before the first frame update
     void Start()
     {
-        to = gameObject.transform;
-        Debug.Log(to.rotation);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -30,7 +27,6 @@ public class StickmanBodyScript : MonoBehaviour
             anim.SetTrigger("standUp");
             backTheAngle = true;
             from = gameObject.transform;
-            Debug.Log(from.rotation);
         }
     }
 
